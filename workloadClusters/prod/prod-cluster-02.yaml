@@ -1,12 +1,12 @@
 apiVersion: azure.upbound.io/v1beta1
 kind: ResourceGroup
 metadata:
-  name: akswkldclugrp01
+  name: prod-clu-grp02
   metadata:
   labels:
-    testing.upbound.io/example-name: akswkldclugrp01
+    testing.upbound.io/example-name: prod-clu-grp02
 spec:
   forProvider:
-    location: "West US 2"
+    location: "East US 2"
   providerConfigRef:
     name: default
