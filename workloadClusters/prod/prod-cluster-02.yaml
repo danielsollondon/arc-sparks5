@@ -7,7 +7,7 @@ metadata:
     testing.upbound.io/example-name: prod-clu-grp01
 spec:
   forProvider:
-    location: "West US 2"
+    location: "East US 2"
   providerConfigRef:
     name: default
 --- 
@@ -26,13 +26,13 @@ spec:
     dnsPrefix: exampleaks1
     identity:
       - type: SystemAssigned
-    location: West US 2
+    location: East US 2
     azurePolicyEnabled: true
     microsoftDefender:
-      - logAnalyticsWorkspaceId: 9b67fd4d-8761-44e2-b981-02e24df060cf
+      - logAnalyticsWorkspaceId: d97d6002-9d20-4d0a-af42-4d13f947d582
     resourceGroupNameSelector:
       matchLabels:
         testing.upbound.io/example-name: prod-clu-grp01
     tags:
       Environment: Production
-      Location: West US 2
+      Location: East US 2
