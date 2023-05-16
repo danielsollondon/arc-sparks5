@@ -21,12 +21,13 @@ spec:
   forProvider:
     defaultNodePool:
       - name: default
-        nodeCount: 1
+        nodeCount: 3
         vmSize: Standard_D2_v2
     dnsPrefix: exampleaks1
     identity:
       - type: SystemAssigned
     location: West US 2
+    azurePolicyEnabled: true
     resourceGroupNameSelector:
       matchLabels:
         testing.upbound.io/example-name: prod-clu-grp01
