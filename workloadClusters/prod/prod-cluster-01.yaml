@@ -1,0 +1,13 @@
+apiVersion: azure.upbound.io/v1beta1
+kind: ResourceGroup
+metadata:
+  name: prod-clu-grp01
+  metadata:
+  labels:
+    testing.upbound.io/example-name: prod-clu-grp01
+spec:
+  forProvider:
+    location: "West US 2"
+  providerConfigRef:
+    name: default
+
