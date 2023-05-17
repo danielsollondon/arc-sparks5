@@ -1,10 +1,10 @@
 apiVersion: azure.upbound.io/v1beta1
 kind: ResourceGroup
 metadata:
-  name: prod-clu-grp03
+  name: prod-clu-grp04
   metadata:
   labels:
-    testing.upbound.io/example-name: prod-clu-grp03
+    testing.upbound.io/example-name: prod-clu-grp04
 spec:
   forProvider:
     location: "East US 2"
@@ -15,8 +15,8 @@ apiVersion: containerservice.azure.upbound.io/v1beta1
 kind: KubernetesCluster
 metadata:
   labels:
-    testing.upbound.io/example-name: akswkldclu003
-  name: akswkldclu003
+    testing.upbound.io/example-name: akswkldclu004
+  name: akswkldclu004
 spec:
   forProvider:
     defaultNodePool:
@@ -28,11 +28,9 @@ spec:
       - type: SystemAssigned
     location: East US 2
     azurePolicyEnabled: true
-    microsoftDefender:
-      - logAnalyticsWorkspaceId: d97d6002-9d20-4d0a-af42-4d13f947d582
     resourceGroupNameSelector:
       matchLabels:
-        testing.upbound.io/example-name: prod-clu-grp03
+        testing.upbound.io/example-name: prod-clu-grp04
     tags:
       Environment: Production
       Location: East US 2
