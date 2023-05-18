@@ -10,4 +10,42 @@ spec:
     location: "West US 2"
   providerConfigRef:
     name: default
+---
+apiVersion: azure.upbound.io/v1beta1
+kind: ResourceGroup
+metadata:
+  name: prod-clu-grp01
+  metadata:
+  labels:
+    testing.upbound.io/example-name: prod-clu-grp01
+spec:
+  forProvider:
+    location: "West US 2"
+  providerConfigRef:
+    name: default
+--- 
+apiVersion: containerservice.azure.upbound.io/v1beta1
+kind: KubernetesCluster
+metadata:
+  labels:
+    testing.upbound.io/example-name: akswkldclu001
+  name: akswkldclu001
+spec:
+  forProvider:
+    defaultNodePool:
+      - name: default
+        nodeCount: 3
+        vmSize: Standard_D2_v2
+    dnsPrefix: exampleaks1
+    identity:
+      - type: SystemAssigned
+    location: West US 2
+    azurePolicyEnabled: true
+    resourceGroupNameSelector:
+      matchLabels:
+        testing.upbound.io/example-name: prod-clu-grp01
+    tags:
+      Environment: Production
+      Location: West US 2
+
 
