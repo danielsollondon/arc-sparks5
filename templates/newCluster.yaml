@@ -2,7 +2,6 @@ apiVersion: azure.upbound.io/v1beta1
 kind: ResourceGroup
 metadata:
   name: prod-clu-grp01
-  metadata:
   labels:
     testing.upbound.io/example-name: prod-clu-grp01
 spec:
@@ -28,8 +27,6 @@ spec:
       - type: SystemAssigned
     location: West US 2
     azurePolicyEnabled: true
-    microsoftDefender:
-      - logAnalyticsWorkspaceId: 9b67fd4d-8761-44e2-b981-02e24df060cf
     resourceGroupNameSelector:
       matchLabels:
         testing.upbound.io/example-name: prod-clu-grp01
