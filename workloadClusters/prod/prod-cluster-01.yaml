@@ -15,7 +15,7 @@ kind: KubernetesCluster
 metadata:
   labels:
     testing.upbound.io/example-name: akswkldclu001
-  name: akswkldclu001
+  name: akswkldclu002
 spec:
   forProvider:
     defaultNodePool:
@@ -26,7 +26,7 @@ spec:
     identity:
       - type: SystemAssigned
     location: West US 2
-    azurePolicyEnabled: true
+    azurePolicyEnabled: false
     resourceGroupNameSelector:
       matchLabels:
         testing.upbound.io/example-name: xplane-clu-grp01
