@@ -39,7 +39,7 @@ kind: KubernetesCluster
 metadata:
   labels:
     testing.upbound.io/example-name: akswkldclu011
-  name: akswkldclu011
+  name: akswkldclu021
 spec:
   forProvider:
     defaultNodePool:
