@@ -1,9 +1,9 @@
 apiVersion: azure.upbound.io/v1beta1
 kind: ResourceGroup
 metadata:
-  name: prod-clu-grp01
+  name: prod-clu-cp-grp01
   labels:
-    testing.upbound.io/example-name: prod-clu-grp01
+    testing.upbound.io/example-name: prod-clu-cp-grp01
 spec:
   forProvider:
     location: "West US 2"
@@ -29,7 +29,7 @@ spec:
     azurePolicyEnabled: true
     resourceGroupNameSelector:
       matchLabels:
-        testing.upbound.io/example-name: prod-clu-grp01
+        testing.upbound.io/example-name: prod-clu-cp-grp01
     tags:
       Environment: Production
       Location: West US 2
@@ -53,7 +53,7 @@ spec:
     azurePolicyEnabled: true
     resourceGroupNameSelector:
       matchLabels:
-        testing.upbound.io/example-name: prod-clu-grp01
+        testing.upbound.io/example-name: prod-clu-cp-grp01
     tags:
       Environment: Production
       Location: West US 2
